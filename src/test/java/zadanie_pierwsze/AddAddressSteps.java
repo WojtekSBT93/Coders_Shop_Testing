@@ -31,7 +31,7 @@ public class AddAddressSteps {
 
             System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
             driver = new ChromeDriver();
-            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             driver.get(url);
             homePage = new HomePage(driver);
             logInToYourAccount = new LogInToYourAccount(driver);
