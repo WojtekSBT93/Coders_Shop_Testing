@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
     public class YourAccountPage {
 
-        @FindBy(xpath = "//i[@class='material-icons'][normalize-space()='\uE567']")
+        @FindBy(xpath = "//a[@title = 'Addresses']")
         private WebElement addressesPage;
         @FindBy(xpath = "//input[@class='ui-autocomplete-input']")
         private WebElement searchBar;

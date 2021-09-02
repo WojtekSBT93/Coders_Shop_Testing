@@ -12,8 +12,6 @@ public class FinalizeOrder {
 @FindBy(name = "confirm-addresses")
     private WebElement confirmAddresses;
 
-//@FindBy(id = "delivery_option_1")
-  //  private WebElement pickUpStore;
 
 @FindBy(name = "confirmDeliveryOption")
     private WebElement confirmDeliveryOption;

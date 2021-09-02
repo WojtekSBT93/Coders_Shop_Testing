@@ -12,7 +12,7 @@ import java.io.File;
 
 public class OrderIsConfirmed {
 
-    @FindBy(xpath = "//body[@id ='order-confirmation']")
+    @FindBy(id ="order-confirmation")
     private WebElement orderIsConfirmed;
 
     public OrderIsConfirmed(WebDriver driver) {

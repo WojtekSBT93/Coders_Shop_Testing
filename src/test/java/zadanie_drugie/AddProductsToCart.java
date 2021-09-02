@@ -45,7 +45,7 @@ public class AddProductsToCart {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://prod-kurs.coderslab.pl/index.php");
-        TakesScreenshot scrShot =((TakesScreenshot)driver);
+        //TakesScreenshot scrShot =((TakesScreenshot)driver);
         homePage = new HomePage(driver);
         logInToYourAccount = new LogInToYourAccount(driver);
         yourAccountPage = new YourAccountPage(driver);
@@ -60,8 +60,7 @@ public class AddProductsToCart {
         String passwordValue = "Jacek25";
         logInToYourAccount.fillPasswordToSignIn(passwordValue);
         logInToYourAccount.clickSignInBtn();
-        Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
-        ImageIO.write(fpScreenshot.getImage(),"PNG",new File("/Users/wojciechborowiak/FinalExcersises/src/test/resources/Screenshots"));
+
 
     }
 
@@ -128,8 +127,11 @@ public class AddProductsToCart {
 
 
     @Then("^User see info your order is confirmed$")
-    public void userSeeInfoYourOrderIsConfirmed() {
+    public void userSeeInfoYourOrderIsConfirmed() throws IOException {
         orderIsConfirmed.screenshotOfOrder();
+        TakesScreenshot scrShot =((TakesScreenshot)driver);
+        Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+        ImageIO.write(fpScreenshot.getImage(),"PNG",new File("/Users/wojciechborowiak/FinalExcersises/src/test/resources/Screenshots"));
 
 
 

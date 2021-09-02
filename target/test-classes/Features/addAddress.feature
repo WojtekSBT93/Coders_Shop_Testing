@@ -14,6 +14,7 @@ Feature: Add address
     And password entered in login form password input
     And SignIn button clicked
     And click addresses btn
+    And click create new address btn
     And address form filled <alias> <address> <city> <zip/postal code> <country> <phone>
     And click save
     Then address added

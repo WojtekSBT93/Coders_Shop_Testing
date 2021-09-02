@@ -21,6 +21,7 @@ public class AddAddressSteps {
     private YourAccountPage yourAccountPage;
     private NewAddressPage newAddressPage;
     private YourAddressPage yourAddressPage;
+    private AddressesPage addressesPage;
 
 
 
@@ -38,6 +39,7 @@ public class AddAddressSteps {
             yourAccountPage = new YourAccountPage(driver);
             newAddressPage = new NewAddressPage(driver);
             yourAddressPage = new YourAddressPage(driver);
+            addressesPage = new AddressesPage(driver);
 
 
         }
@@ -70,6 +72,11 @@ public class AddAddressSteps {
         public void clickAddressesBtn () {
             yourAccountPage.clickAddFirstAddressBtn();
         }
+
+        @And("^click create new address btn$")
+        public void clickCreateNewAddressBtn() {
+        addressesPage.createNewAddresButton();
+    }
 
 
 
